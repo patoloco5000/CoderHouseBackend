@@ -1,0 +1,21 @@
+[ 
+    { 
+        "id":"lhjtg1ta0.b788169fcbd32", 
+        "code": "abc123", 
+        "title": "producto prueba1", 
+        "description": "Este es un producto prueba1", 
+        "thumbnail": "Sin imagen1", 
+        "price": 200, 
+        "stock": 25 
+        }, 
+        { 
+            
+            "id": "lhjtg1ta0.b788169fcbd32", 
+            "code": "abc123", 
+            "title": "producto prueba2", 
+            "description": "Este es un producto prueba2", 
+            "thumbnail": "Sin imagen2",
+            "price": 242, 
+            "stock": 25 
+            } 
+        ]
