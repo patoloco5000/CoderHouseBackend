@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "curso coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patoloco5000/ProductManager.git"
+  },
+  "author": "Patricio Peluffo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patoloco5000/ProductManager/issues"
+  },
+  "homepage": "https://github.com/patoloco5000/ProductManager#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
