@@ -1,4 +1,4 @@
-const express = rquire('express')
+const express = require('express')
 const app = express()
 
 
@@ -31,7 +31,53 @@ app.get('/categorias', (req, res)=>{
     console.log(req.query)
 })
 
+let product = []
 
+app.use(express.json())
+
+app.get('/allproducts', (req, res)=>{
+    res.send(product)
+})
+
+app.post('/saveProduct', (req, res)=>{
+    let newProduct = req.body
+
+    newProduct.id = Math.random()
+    
+    console.log(newProduct)
+    product.push(newProduct)
+
+    res.send({msg : 'producto creado', data: newProduct})
+})
+
+app.put('/updateProduct/:id', (req, res)=>{
+    let id = req.params.id
+    let productUpdate = req.body
+
+    console.log(product)
+    let arrayNewProduct = product.map(ele => {
+        if(ele.id == id){
+            return {...ele, productUpdate}
+        }else{
+            return ele
+        }
+    })
+    console.log(arrayNewProduct)
+})
+
+app.delete('/deleteProduct/:id', (req, res)=>{
+    let id = req.params.id
+    console.log('id: ', id)
+    let newArray = product.filter(elem => {
+        return elem.id !== id
+    })
+
+    console.log(newArray)
+    product = newArray
+
+    res.send({msg : 'Producto Eliminado', data: 'newProduct'})
+
+})
 
 app.listen('8080', ()=>{
     console.log('Server running on port 8080')
